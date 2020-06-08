@@ -28,8 +28,8 @@ const renderTrainer = (trainerHash) => {
     p.innerHTML = trainerHash.name
     button.setAttribute("data-trainer-id", trainerHash.id)
     button.innerHTML = "Add Pokemon"
-    // attach event listener to button (click)
-
+    button.addEventListener("click", createPokemon )// ***** attach event listener to button (click) *****
+    // listen to a click event and invock an external function
     // The first child inside the div is the paragraph
     div.appendChild(p)
     div.appendChild(button)
@@ -60,7 +60,17 @@ const renderPokemon = (pokemon) => {
     button.setAttribute("class", "release")
     button.setAttribute("data-pokemon-id", pokemon.id)
     button.innerHTML = "Realease"
+    button.addEventListener("click", deletePokemon )// ***** attach event listener to button (click) *****
+
 
     li.appendChild(button)
     ul.appendChild(li)
+}
+
+const createPokemon = () => {
+
+}
+
+const deletePokemon = () => {
+
 }
